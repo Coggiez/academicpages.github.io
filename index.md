@@ -14,7 +14,7 @@ subtitle: Research in bilingualism, language, and cognition
   <p>This is the home of the Poarch Lab at the University of Groningen.</p>
 
   <p style="font-style: italic; margin-top: 10px;">
-    Bridging cognitive science and language technology through bilingual research.
+    Bridging research in bilingualism, language, and cognition.
   </p>
 </div>
 
