@@ -2,15 +2,17 @@
    Various functions that we want to use within the template
    ========================================================================== */
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+// Set default theme to "light" if no theme is stored
+if (!localStorage.getItem("theme")) {
+  localStorage.setItem("theme", "light");
+}
+
+// Determine the expected state of the theme toggle, which can be "dark", "light", or "system"
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
   return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 };
 
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is
-// "system", the computed theme is determined based on the user's system preference.
 let determineComputedTheme = () => {
   let themeSetting = determineThemeSetting();
   if (themeSetting != "system") {
@@ -140,3 +142,4 @@ $(document).ready(function () {
   });
 
 });
+
